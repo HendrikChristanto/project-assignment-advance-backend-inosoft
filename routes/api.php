@@ -35,7 +35,7 @@ Route::group([
 Route::group([
     'middleware' => 'auth:api'
 ], function() {
-    Route::get('tasks', [TaskController::class, 'getTasks']);  // Can be filtered : http://127.0.0.1:8000/api/tasks?title=gas&is_done=0
+    Route::get('tasks', [TaskController::class, 'getTasks']);  // Can be filtered : http://127.0.0.1:8000/api/tasks?title=assignment&is_done=false
     Route::get('task/{id}', [TaskController::class, 'getTask']);
     Route::post('task', [TaskController::class, 'createTask']);
     Route::put('task', [TaskController::class, 'updateTask']);
